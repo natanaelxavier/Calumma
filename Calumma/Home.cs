@@ -28,16 +28,13 @@ namespace Calumma
         Enums.ETipoCores TipoSelecionado;
         Bitmap screenPixel = new Bitmap(1, 1, PixelFormat.Format32bppArgb);
         Color CorDetectada;
-
-        List<Color> LstColors;
         #endregion
 
         #region Constructs
         public Home()
         {
             InitializeComponent();
-
-            this.LstColors = new List<Color>();
+            this.KeyPreview = true;
             ComboTiposPesquisa.CarregarComboComEnum<Enums.ETipoCores>();
             Observador = new Timer { Interval = 1 };
             Observador.Tick += Tempo_Tick;
@@ -72,7 +69,7 @@ namespace Calumma
         {
             try
             {
-                if(this.CorDetectada != null)
+                if (this.CorDetectada != null)
                 {
                     PainelDeCor.BackColor = this.CorDetectada;
                     PainelDeCor.ForeColor = this.CorDetectada.ForeColor();
@@ -96,17 +93,6 @@ namespace Calumma
                 throw Problema;
             }
         }
-        void CarregarCoresSalvas()
-        {
-            try
-            {
-                ListBoxColors.DataSource = this.LstColors;
-            }
-            catch (Exception Problema)
-            {
-                throw Problema;
-            }
-        }
         #endregion
 
         #region Events
@@ -121,14 +107,33 @@ namespace Calumma
                 MessageBox.Show(Problema.Message);
             }
         }
-        void Home_KeyDown(object sender, KeyEventArgs e)
+        private void Home_KeyUp(object sender, KeyEventArgs e)
         {
             try
             {
-                if(e.Alt && e.KeyCode == Keys.X)
+                if (e.KeyCode == Keys.X)
                 {
-                    this.LstColors.Add(this.CorDetectada);
-                    CarregarCoresSalvas();
+                    if (e.Alt)
+                    {
+                        ListViewItem item = new ListViewItem();
+                        item.BackColor = this.CorDetectada;
+                        item.ForeColor = this.CorDetectada.ForeColor();
+
+                        switch (TipoSelecionado)
+                        {
+                            case Enums.ETipoCores.Html:
+                                item.Text = this.CorDetectada.ToStringHexDecimal();
+                                break;
+                            case Enums.ETipoCores.Rgb:
+                                item.Text = this.CorDetectada.ToStringRGB();
+                                break;
+                            case Enums.ETipoCores.Csharp:
+                                item.Text = this.CorDetectada.ToStringRGB(';');
+                                break;
+                        }
+
+                        ListBoxColors.Items.Add(item);
+                    }
                 }
             }
             catch (Exception Problema)
@@ -137,8 +142,5 @@ namespace Calumma
             }
         }
         #endregion
-
-
     }
-
 }

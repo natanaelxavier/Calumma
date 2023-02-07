@@ -8,3 +8,13 @@ E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.csproj.GenerateResource.ca
 E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.csproj.CoreCompileInputs.cache
 E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.exe
 E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.pdb
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\bin\Debug\Calumma.exe.config
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\bin\Debug\Calumma.exe
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\bin\Debug\Calumma.pdb
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.csproj.AssemblyReference.cache
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.Home.resources
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.Properties.Resources.resources
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.csproj.GenerateResource.cache
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.exe
+C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.pdb
