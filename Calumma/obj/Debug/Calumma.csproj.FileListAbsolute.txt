@@ -1,0 +1,10 @@
+E:\Calumma\CalummaSolutions\Calumma\bin\Debug\Calumma.exe.config
+E:\Calumma\CalummaSolutions\Calumma\bin\Debug\Calumma.exe
+E:\Calumma\CalummaSolutions\Calumma\bin\Debug\Calumma.pdb
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.csproj.AssemblyReference.cache
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.Home.resources
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.Properties.Resources.resources
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.csproj.GenerateResource.cache
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.csproj.CoreCompileInputs.cache
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.exe
+E:\Calumma\CalummaSolutions\Calumma\obj\Debug\Calumma.pdb
