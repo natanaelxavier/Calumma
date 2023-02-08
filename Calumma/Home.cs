@@ -133,6 +133,7 @@ namespace Calumma
                         }
 
                         ListBoxColors.Items.Add(item);
+                        ListBoxColors.Columns[0].Width = ListBoxColors.Width - 4 - SystemInformation.VerticalScrollBarWidth;
                     }
                 }
             }

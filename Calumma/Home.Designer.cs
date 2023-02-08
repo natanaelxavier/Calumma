@@ -54,46 +54,51 @@ namespace Calumma
             // 
             // CampoCodigoColor
             // 
-            this.CampoCodigoColor.Location = new System.Drawing.Point(6, 110);
+            this.CampoCodigoColor.Location = new System.Drawing.Point(8, 135);
+            this.CampoCodigoColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CampoCodigoColor.Name = "CampoCodigoColor";
-            this.CampoCodigoColor.Size = new System.Drawing.Size(191, 20);
+            this.CampoCodigoColor.Size = new System.Drawing.Size(253, 22);
             this.CampoCodigoColor.TabIndex = 1;
             // 
             // ComboTiposPesquisa
             // 
             this.ComboTiposPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboTiposPesquisa.FormattingEnabled = true;
-            this.ComboTiposPesquisa.Location = new System.Drawing.Point(6, 83);
+            this.ComboTiposPesquisa.Location = new System.Drawing.Point(8, 102);
+            this.ComboTiposPesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ComboTiposPesquisa.Name = "ComboTiposPesquisa";
-            this.ComboTiposPesquisa.Size = new System.Drawing.Size(191, 21);
+            this.ComboTiposPesquisa.Size = new System.Drawing.Size(253, 24);
             this.ComboTiposPesquisa.TabIndex = 2;
             this.ComboTiposPesquisa.SelectedIndexChanged += new System.EventHandler(this.ComboTiposPesquisa_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 151);
+            this.label1.Location = new System.Drawing.Point(4, 186);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Lista de Cores";
             // 
             // PainelDeCor
             // 
             this.PainelDeCor.BackColor = System.Drawing.Color.DimGray;
-            this.PainelDeCor.Location = new System.Drawing.Point(6, 6);
+            this.PainelDeCor.Location = new System.Drawing.Point(8, 7);
+            this.PainelDeCor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PainelDeCor.Name = "PainelDeCor";
-            this.PainelDeCor.Size = new System.Drawing.Size(191, 71);
+            this.PainelDeCor.Size = new System.Drawing.Size(255, 87);
             this.PainelDeCor.TabIndex = 5;
             this.PainelDeCor.Text = "#000000";
             this.PainelDeCor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ListBoxColors
             // 
-            this.ListBoxColors.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.ListBoxColors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ListBoxColors.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.ListBoxColors.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.ListBoxColors.HideSelection = false;
             listViewItem1.StateImageIndex = 0;
             listViewItem2.StateImageIndex = 0;
             listViewItem3.StateImageIndex = 0;
@@ -106,11 +111,12 @@ namespace Calumma
             listViewItem5,
             listViewItem6,
             listViewItem7});
-            this.ListBoxColors.Location = new System.Drawing.Point(6, 167);
+            this.ListBoxColors.Location = new System.Drawing.Point(8, 206);
+            this.ListBoxColors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ListBoxColors.MultiSelect = false;
             this.ListBoxColors.Name = "ListBoxColors";
             this.ListBoxColors.ShowGroups = false;
-            this.ListBoxColors.Size = new System.Drawing.Size(191, 199);
+            this.ListBoxColors.Size = new System.Drawing.Size(253, 244);
             this.ListBoxColors.TabIndex = 6;
             this.ListBoxColors.TileSize = new System.Drawing.Size(1, 1);
             this.ListBoxColors.UseCompatibleStateImageBehavior = false;
@@ -123,9 +129,9 @@ namespace Calumma
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(203, 374);
+            this.ClientSize = new System.Drawing.Size(271, 460);
             this.Controls.Add(this.PainelDeCor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ComboTiposPesquisa);
@@ -134,6 +140,7 @@ namespace Calumma
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Home";

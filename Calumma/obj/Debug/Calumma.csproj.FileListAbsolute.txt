@@ -18,3 +18,14 @@ C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.c
 C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.csproj.CoreCompileInputs.cache
 C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.exe
 C:\Users\usuario\Source\Repos\natanaelxavier\Calumma\Calumma\obj\Debug\Calumma.pdb
+D:\Projetos\Calumma\Calumma\Calumma\bin\Debug\Calumma.exe.config
+D:\Projetos\Calumma\Calumma\Calumma\bin\Debug\Calumma.exe
+D:\Projetos\Calumma\Calumma\Calumma\bin\Debug\Calumma.pdb
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.csproj.AssemblyReference.cache
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.csproj.SuggestedBindingRedirects.cache
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.Home.resources
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.Properties.Resources.resources
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.csproj.GenerateResource.cache
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.csproj.CoreCompileInputs.cache
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.exe
+D:\Projetos\Calumma\Calumma\Calumma\obj\Debug\Calumma.pdb
