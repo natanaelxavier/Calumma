@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Entidade.HistoricoCor.cs" />
+    <Compile Include="Entidades\Entidade.ListaHistoricoCor.cs" />
     <Compile Include="Helpers\Helpers.ComboBox.cs" />
     <Compile Include="Helpers\Helpers.ExportaCor.cs" />
     <Compile Include="Home.cs">
@@ -89,8 +91,6 @@
   <ItemGroup>
     <Content Include="427496.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

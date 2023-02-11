@@ -10,7 +10,7 @@ namespace Calumma.Enums
 	/// <summary>
 	/// Enum representando o tipo de formas para visualizar as cores.
 	/// </summary>
-	enum ETipoCores
+	public enum ETipoCores
 	{
 		[Description("HTML")]
 		Html,

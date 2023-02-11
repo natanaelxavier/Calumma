@@ -1,4 +1,5 @@
-﻿using Calumma.Helpers;
+﻿using Calumma.Entidades;
+using Calumma.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,12 +29,17 @@ namespace Calumma
         Enums.ETipoCores TipoSelecionado;
         Bitmap screenPixel = new Bitmap(1, 1, PixelFormat.Format32bppArgb);
         Color CorDetectada;
+        ListaHistoricoCor Historico;
+        HistoricoCor _ItemSelecionado;
+        BindingSource bindingSource;
         #endregion
 
         #region Constructs
         public Home()
         {
             InitializeComponent();
+            this.Historico = new ListaHistoricoCor();
+            AtualizarGridHistoricos();
             this.KeyPreview = true;
             ComboTiposPesquisa.CarregarComboComEnum<Enums.ETipoCores>();
             Observador = new Timer { Interval = 1 };
@@ -93,6 +99,24 @@ namespace Calumma
                 throw Problema;
             }
         }
+        void AtualizarGridHistoricos()
+        {
+            try
+            {
+                GridHistoricoCores.AutoGenerateColumns = false;
+
+                bindingSource = new BindingSource
+                {
+                    DataSource = this.Historico
+                };
+                GridHistoricoCores.DataSource = bindingSource;
+                GridHistoricoCores.ClearSelection();
+            }
+            catch (Exception Problema)
+            {
+                throw Problema;
+            }
+        }
         #endregion
 
         #region Events
@@ -115,25 +139,58 @@ namespace Calumma
                 {
                     if (e.Alt)
                     {
-                        ListViewItem item = new ListViewItem();
-                        item.BackColor = this.CorDetectada;
-                        item.ForeColor = this.CorDetectada.ForeColor();
+                        this.Historico.Add(this.CorDetectada, this.TipoSelecionado);
+                        bindingSource.ResetBindings(false);
+                        GridHistoricoCores.ClearSelection();
+                    }
+                }
+            }
+            catch (Exception Problema)
+            {
+                MessageBox.Show(Problema.Message);
+            }
+        }
+        private void GridHistoricoCores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (GridHistoricoCores.DataSource != null && e.RowIndex >= 0)
+            {
+                if (GridHistoricoCores.Rows[e.RowIndex].DataBoundItem != null)
+                {
+                    using (Entidades.HistoricoCor obj = (Entidades.HistoricoCor)GridHistoricoCores.Rows[e.RowIndex].DataBoundItem)
+                    {
+                        e.CellStyle.BackColor = obj.Cor;
+                        e.CellStyle.ForeColor = obj.Cor.ForeColor();
+                        e.Value = obj.ToString();
+                    }
+                }
+            }
+        }
+        private void GridHistoricoCores_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            e.PaintParts &= ~DataGridViewPaintParts.Focus;
 
-                        switch (TipoSelecionado)
-                        {
-                            case Enums.ETipoCores.Html:
-                                item.Text = this.CorDetectada.ToStringHexDecimal();
-                                break;
-                            case Enums.ETipoCores.Rgb:
-                                item.Text = this.CorDetectada.ToStringRGB();
-                                break;
-                            case Enums.ETipoCores.Csharp:
-                                item.Text = this.CorDetectada.ToStringRGB(';');
-                                break;
-                        }
-
-                        ListBoxColors.Items.Add(item);
-                        ListBoxColors.Columns[0].Width = ListBoxColors.Width - 4 - SystemInformation.VerticalScrollBarWidth;
+            if (GridHistoricoCores.DataSource != null && e.RowIndex >= 0)
+            {
+                if (GridHistoricoCores.Rows[e.RowIndex].DataBoundItem != null)
+                {
+                    using (Entidades.HistoricoCor obj = (Entidades.HistoricoCor)GridHistoricoCores.Rows[e.RowIndex].DataBoundItem)
+                    {
+                        GridHistoricoCores.Rows[e.RowIndex].DefaultCellStyle.SelectionBackColor = obj.Cor;
+                        GridHistoricoCores.Rows[e.RowIndex].DefaultCellStyle.SelectionForeColor = obj.Cor.ForeColor();
+                    }
+                }
+            }
+        }
+        private void GridHistoricoCores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (GridHistoricoCores.DataSource != null && e.RowIndex >= 0)
+                {
+                    if (GridHistoricoCores.Rows[e.RowIndex].DataBoundItem != null)
+                    {
+                        _ItemSelecionado = (Entidades.HistoricoCor)GridHistoricoCores.Rows[e.RowIndex].DataBoundItem;
+                        CampoCodigoColor.Text = _ItemSelecionado.ToString();
                     }
                 }
             }
